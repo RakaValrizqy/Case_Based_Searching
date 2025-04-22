@@ -87,7 +87,7 @@ def roulette_wheel_selection(population):
         prob_selection = [f / total_fitness for f in fitness_scores] #probabilitas seleksi proporsional terhadap fitness(f)
 
     def select_one(): #memilih 1 chromosom untuk parent
-        r = uniform(0, 1) #untuk generate random 0 atau 1
+        r = uniform(0, 1) #untuk mengambil angka acak desimal antara 0-1
         cumulative_prob = 0.0
         for chrom, prob in zip(population, prob_selection): #menggabungkan list/array population untuk perulangan sehinnga dapat pasangan (chrom, prob).
             cumulative_prob += prob
